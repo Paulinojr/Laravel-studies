@@ -12,3 +12,12 @@
 */
 
 Route::get('/', 'PostsController@index');
+
+//Route for creating posts
+Route::get('/posts/create', 'PostsController@create');
+
+//Route for post storing
+Route::post('/posts', 'PostsController@store');
+
+//Route for showing the post
+Route::get('/posts/{post}', 'PostsController@show');
