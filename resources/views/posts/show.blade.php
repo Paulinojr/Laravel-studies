@@ -10,8 +10,14 @@
 
                 {{ $post->body }}
 
+                <hr>
+
+                @include('posts.comments')
+
             </div>
+
             @include('partials.sidebar')
+
         </div>
     </div>
 

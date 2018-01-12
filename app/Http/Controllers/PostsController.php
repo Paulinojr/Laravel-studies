@@ -8,6 +8,12 @@ use App\Posts;
 
 class PostsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function index()
     {
 
@@ -44,6 +50,7 @@ class PostsController extends Controller
 
         $post->title = request('title');
         $post->body = request('body');
+        $post->user_id = auth()->id();
 
         $this->validateData();
 
