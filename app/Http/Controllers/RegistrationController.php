@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+use App\Mail\Welcome;
+
 class RegistrationController extends Controller
 {
 
@@ -34,6 +36,9 @@ class RegistrationController extends Controller
 
         // Sign the user
         auth()->login($user);
+
+        //Send a "Welcome" mail to the user
+        \Mail::to($user)->send(new Welcome);
 
         // Redirect to the home page
         return redirect()->home();

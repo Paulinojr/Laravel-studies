@@ -19,8 +19,4 @@
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
-        </div><!-- /.blog-main -->
-
-      </div><!-- /.row -->
-    </div><!-- /.container -->
 @endsection

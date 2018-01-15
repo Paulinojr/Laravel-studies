@@ -14,11 +14,11 @@ class PostsController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
 
-    public function index()
+    public function index(Posts $posts)
     {
 
         //Fetch all posts
-        $posts = Posts::all();
+        $posts = $posts->all();
 
         return view('posts.index', [
             'posts' => $posts

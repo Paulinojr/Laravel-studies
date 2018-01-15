@@ -23,6 +23,7 @@
     <!-- fornece o conteudo -->
     @yield('content')
 
+    @include('partials.sidebar')
 
     @include('partials.footer')
 
